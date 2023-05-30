@@ -9,8 +9,9 @@ export default function Home(){
             <a href="#hero">🚀 Acme Rockets</a>
           </h1>
           <div>
-            <button id="hamburger-button" className="text-3xl md:hidden cursor-pointer">
+            <button id="hamburger-button" className="text-3xl md:hidden cursor-pointer relative w-8 h-8">
               &#9776;
+             
             </button>
             <nav className="hidden md:block space-x-8 text-xl" aria-label="main">
               <a href="#rockets" className="hover:opacity-90">Our Rockets</a>
