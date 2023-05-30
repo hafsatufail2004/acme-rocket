@@ -9,10 +9,10 @@ export default function Home(){
             <a href="#hero">🚀 Acme Rockets</a>
           </h1>
           <div>
-            <button id="mobile-open-button" className="text-3xl sm:hidden focus:outline-none">
+            <button id="hamburger-button" className="text-3xl md:hidden cursor-pointer">
               &#9776;
             </button>
-            <nav className="hidden sm:block space-x-8 text-xl" aria-label="main">
+            <nav className="hidden md:block space-x-8 text-xl" aria-label="main">
               <a href="#rockets" className="hover:opacity-90">Our Rockets</a>
               <a href="#testimonals"className="hover:opacity-90">Testimonials</a>
             <a href="#contact" className="hover:opacity-90">Contact Us</a>
@@ -21,7 +21,7 @@ export default function Home(){
       </section>
     </div><main className="max-w-4xl mx-auto">
         <section id="hero"
-          className="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40">
+          className="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
           <article className="sm:w-1/2">
             <h2
               className="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-white dark:text-white">
@@ -40,13 +40,13 @@ export default function Home(){
         </section>
         <hr className="mx-auto bg-black dark:bg-white w-1/2"/>
 
-          <section id="rockets" className="p-6 my-12 scroll-mt-20">
+          <section id="rockets" className="p-6 my-12 scroll-mt-20  widescreen:section-min-height tallscreen:section-min-height">
             <h2 className="text-4xl font-bold text-center sm:text-5xl mb-6 text-lime-200">Our Rockets</h2>
             <ul className="list-none mx-auto my-12 flex flex-col sm:flew-row items-center gap-8">
 
 <li className="w-2/3 sm:w-5/6 flex flex-col item-center border-4 border-solid border-slate-700 dark:border-gray-100 bg-black dark:bg-black py-6 px-2 rounded-3xl shadow-xl">
   <Image src={"/image/rocketman.png"} alt="Explorer" width={300} height={300} className=" mx-auto w-1/2 mb-6 "/>
-  <h3 className="text-3xl text-center text-white dark:text-white">Explorer</h3>
+  <h3 className="text-3xl text-center text-white dark:text-white  ">Explorer</h3>
 
   <p className="hidden sm:block text-3xl mt-2 text-center text-slate-400 dark:text-white">$</p>
 
@@ -58,7 +58,7 @@ export default function Home(){
 
 <li className="w-2/3 sm:w-5/6 flex flex-col item-center border-4 border-solid border-slate-700 dark:border-gray-100 bg-black dark:bg-black py-6 px-2 rounded-3xl shadow-xl">
   <Image src={"/image/rocketride.png"} alt="Adventure" width={300} height={300} className=" mx-auto w-1/2 mb-6 "/>
-  <h3 className="text-3xl text-center text-white dark:text-white">Adventure</h3>
+  <h3 className="text-3xl text-center text-white dark:text-white ">Adventure</h3>
 
   <p className="hidden sm:block text-3xl mt-2 text-center text-slate-400 dark:text-white">$$</p>
 
@@ -83,7 +83,7 @@ export default function Home(){
           <hr className="mx-auto  bg-black dark:bg-white w-1/2"/>
 
           <section id="testimonals" className="p-6 my-12 scroll-mt-20" >
-          <h2 className="text-4xl font-bold text-center sm:text-5xl mb-6 text-lime-200">Testimonial</h2>
+          <h2 className="text-4xl font-bold text-center sm:text-5xl mb-6 text-lime-200  widescreen:section-min-height tallscreen:section-min-height">Testimonial</h2>
 </section>
           <figure className="my-12">
             <blockquote className="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
@@ -131,7 +131,7 @@ after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl af
         <hr className="mx-auto bg-black dark:bg-white w-1/2"/>
 
         <section id="contact"  className="p-6 my-12 scroll-mt-16" >
-        <h2 className="text-4xl font-bold text-center sm:text-5xl mb-6 text-lime-200">Contact Us</h2>
+        <h2 className="text-4xl font-bold text-center sm:text-5xl mb-6 text-lime-200  widescreen:section-min-height tallscreen:section-min-height">Contact Us</h2>
 
         <form action="" className="max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4">
 
@@ -156,6 +156,15 @@ Fairfield ,New Jersey 12233-555<br/>
 Email : AcmeRocket@gmail.com<br/>
 Phone:(666)-66 6666 
           </address>
+          <nav className="hidden md:flex flex-col gap-2 " aria-lable="footer">
+            <a href="#rockets" className="hover:opacity-90">Our Rockets</a>
+            <a href="#testimonals" className="hover:opacity-90">Testimonals</a>
+            <a href="#contact" className="hover:opacity-90">Contact Us</a>
+          </nav>
+<div className="flex flex-col sm:gap-2">
+  <p className="text-right">CopyRight &copy; <span id="year">2023</span></p>
+  <p className="text-right">All Rights Reserved</p>
+</div>
       </section>
     </footer>
 </div>
